@@ -1,6 +1,7 @@
 {
   "name": "e-kavling",
   "version": "0.1.0",
+  "homepage": "https://bmd-rizqireza.github.io/e-kavling",
   "dependencies": {
     "@types/react-beautiful-dnd": "^7.1.2",
     "@types/react-input-mask": "^2.0.1",
@@ -9,6 +10,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
     "enhanced-resolve": "^4.1.0",
+    "gh-pages": "^2.1.1",
     "history": "^4.7.2",
     "is-my-json-valid": "^2.19.0",
     "lodash": "^4.17.11",
@@ -36,7 +38,9 @@
     "build": "react-scripts-ts build",
     "test": "jest --verbose",
     "integration-test": "jest -c jest-integration.config.js",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.14",
