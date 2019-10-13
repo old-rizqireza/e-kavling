@@ -1,73 +1,100 @@
+.ant-btn-primary {
+  background-color: $green-light;
+  border-color: $green-lighter;
+}
+
+.ant-btn-primary:hover {
+  background-color: $white;
+  border-color: $green-light;
+  color: $green-light;
+}
+
 .bt-form-status {
   border-bottom: 1px solid $slate;
   padding-bottom: $spacing-md;
   margin-bottom: $spacing-md;
   overflow: hidden;
+
   p {
     float: left;
     margin-bottom: 0;
     line-height: 34px;
   }
+
   .ant-btn {
     float: right;
   }
 }
+
 .bt-table table tr td {
   max-width: 240px;
 }
+
 .bt-card-title {
   overflow: hidden;
   margin-bottom: $spacing-md;
+
   h3 {
     font-weight: 700;
     margin-bottom: 0;
     font-family: $font-geomanist-book;
     float: left;
-    + a {
+
+    +a {
       text-transform: uppercase;
       font-family: $font-geomanist-book;
       padding-left: $spacing-sm;
       line-height: 24px;
+
       .ant-btn {
         .anticon {
           padding-left: 0;
         }
       }
+
       .anticon {
         padding-left: $spacing;
       }
     }
   }
+
   .ant-btn {
     float: right;
   }
 }
+
 .bt-input-grey {
   background: $slate-lighter;
   padding: $spacing-sm;
   border-radius: $radius-md;
+
   label {
     font-weight: 600;
     text-transform: uppercase;
   }
 }
+
 .bt-tabs--create {
   .ant-tabs-bar {
     display: none;
   }
 }
+
 .bt-input-highlight {
   background: $slate-lighter;
   padding-top: $spacing-md;
   padding-bottom: $spacing-md;
   margin-bottom: $spacing-md;
 }
+
 .bt-cms-not-found {
   width: 560px;
+
   img {
     width: 240px;
   }
 }
+
 .bt-modal-image {
   img {
     max-width: 600px;
@@ -75,8 +102,8 @@
 }
 
 .bt-content {
-  > div {
-    > .ant-spin-container {
+  >div {
+    >.ant-spin-container {
       min-height: calc(100vh - 48px);
     }
   }
@@ -91,13 +118,16 @@
     .ant-layout {
       margin-left: 0;
     }
+
     .bt-card {
       font-size: 12px;
       box-shadow: none;
     }
+
     .bt-content {
       padding: 0 !important;
     }
+
     .bt-user-menu,
     .bt-page-header,
     .bt-sidebar {
@@ -105,10 +135,12 @@
     }
   }
 }
+
 .ant-layout-sider-has-trigger,
 .bt-sidebar-menu {
   padding-bottom: 72px;
 }
+
 .bt-table--lkpp-contract {
   .ant-table-tbody {
     tr:first-child {
@@ -118,11 +150,13 @@
     }
   }
 }
-.bt-page-header__title + .bt-header-link {
+
+.bt-page-header__title+.bt-header-link {
   position: relative;
   top: -24px;
   margin-bottom: -24px;
 }
+
 .element-hidden {
   display: none;
 }

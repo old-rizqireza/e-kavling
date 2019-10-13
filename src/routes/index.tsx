@@ -2,8 +2,13 @@
 // tslint:disable:no-console
 import { BaseWrapper } from '@pages/base';
 import { PageHome } from '@pages/page-home';
+import { PageKavling } from '@pages/page-kavling';
 import { PageLogin } from '@pages/page-login';
+import { PageMonitoring } from '@pages/page-monitoring';
+import { PageNews } from '@pages/page-news';
 import { PageNotFound } from '@pages/page-not-found';
+import { PagePromo } from '@pages/page-promo';
+import { PageReporting } from '@pages/page-reporting';
 import { PageUnAuthorized } from '@pages/page-unauthorized';
 import store from '@store/store';
 import { getModule, keyAccessToken } from '@utils/fetch-data';
@@ -52,6 +57,31 @@ export class AppRouter extends Component<any, any> {
                   exact={true}
                   path="/home"
                   component={(props: any) => requireAuthCommon(PageHome, props)}
+                />
+                <Route
+                  exact={true}
+                  path="/promo"
+                  component={(props: any) => requireAuthCommon(PagePromo, props)}
+                />
+                <Route
+                  exact={true}
+                  path="/news"
+                  component={(props: any) => requireAuthCommon(PageNews, props)}
+                />
+                <Route
+                  exact={true}
+                  path="/kavling"
+                  component={(props: any) => requireAuthCommon(PageKavling, props)}
+                />
+                <Route
+                  exact={true}
+                  path="/monitoring"
+                  component={(props: any) => requireAuthCommon(PageMonitoring, props)}
+                />
+                <Route
+                  exact={true}
+                  path="/reporting"
+                  component={(props: any) => requireAuthCommon(PageReporting, props)}
                 />
                 <Route component={PageNotFound} />
               </Switch>

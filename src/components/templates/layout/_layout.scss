@@ -1,16 +1,34 @@
-.bt-cms {
-  .bt-sidebar {
-    &.ant-layout-sider {
-      background: $navy-darkest;
-    }
-    .ant-layout-sider-trigger {
-      background: $navy-darkest;
+.ant-layout-content {
+  padding: $spacing-md $spacing-xl $spacing-md $spacing-xl;
+  position: relative;
+  min-height: $screen-md-min + 20px;
+}
+
+.ant-card {
+  .ant-card-cover {
+    width: auto;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &.card-img-md {
+    .ant-card-cover {
+      max-height: 180px;
     }
   }
-  .bt-content {
-    padding: $spacing-sm $spacing-lg $spacing-lg $spacing-lg;
-    position: relative;
-    height: 100%;
-    width: 100%;
+
+  &.card-img-lg {
+    .ant-card-cover {
+      max-height: 240px;
+    }
   }
+}
+
+h2 {
+  color: $green-light !important;
+}
+
+.right {
+  float: right;
+  padding-top: $spacing-xs;
 }

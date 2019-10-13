@@ -1,6 +1,6 @@
 import { MenuHeader } from '@components/organisms/menu-header';
 import { getProfile } from '@utils/fetch-data';
-import { Breadcrumb, Button, Layout } from 'antd';
+import { Button, Layout } from 'antd';
 import React, { Component } from 'react';
 const { Content, Footer } = Layout;
 
@@ -58,7 +58,7 @@ export class LayoutCMSComponent extends Component<IProps, any> {
   public toggleMenu = () => this.setState({ openMenu: !this.state.openMenu });
 
   public render() {
-    const { location } = this.props;
+    const { location, children } = this.props;
     return (
       <Layout className="layout">
         <MenuHeader location={location} />
@@ -69,15 +69,15 @@ export class LayoutCMSComponent extends Component<IProps, any> {
             </Button>
           </header>
         )}
-        <Content style={{ padding: '0 50px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
+        <Content>
+          {/* <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
-          <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+          </Breadcrumb> */}
+          {children}
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>&copy; 2019 PT. Nirwana Gemilang Sejahtera</Footer>
       </Layout>
     );
   }

@@ -1,6 +1,11 @@
-import { Layout, Menu } from 'antd';
-import React, { Component, Fragment } from 'react';
+// tslint:disable: jsx-no-lambda
+import { Button, Layout, Menu } from 'antd';
+import React, { Component } from 'react';
 
+import Logo from '@assets/images/logo.png';
+import MenuItem from 'antd/lib/menu/MenuItem';
+import { Link } from 'react-router-dom';
+const { Header } = Layout;
 interface IProps {
   match?: any;
   location?: any;
@@ -25,23 +30,58 @@ export class MenuHeaderComponent extends Component<IProps, {}> {
 
     this.onClickMenu(selectedKey);
   };
+  public actionLogout = () => {
+    localStorage.clear();
+    window.location.href = '/login';
+  };
   public render() {
     return (
-      <Fragment>
-        <Layout.Header>
-          <div className="logo" />
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={['2']}
-            style={{ lineHeight: '64px' }}
-          >
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
-          </Menu>
-        </Layout.Header>
-      </Fragment>
+      <Header>
+        <div className="logo">
+          <img src={Logo} />
+        </div>
+        <Menu
+          theme="light"
+          mode="horizontal"
+          defaultSelectedKeys={['home']}
+          selectedKeys={this.state.selectedKey}
+          onClick={value => this.onClickMenu(value.key)}
+        >
+          <MenuItem key="home">
+            <Link to="/home">
+              <span>Home</span>
+            </Link>
+          </MenuItem>
+          <MenuItem key="promo">
+            <Link to="/promo">
+              <span>Promo</span>
+            </Link>
+          </MenuItem>
+          <MenuItem key="news">
+            <Link to="/news">
+              <span>News</span>
+            </Link>
+          </MenuItem>
+          <MenuItem key="kavling">
+            <Link to="/kavling">
+              <span>Kavling</span>
+            </Link>
+          </MenuItem>
+          <MenuItem key="monitoring">
+            <Link to="/monitoring">
+              <span>Monitoring</span>
+            </Link>
+          </MenuItem>
+          <MenuItem key="reporting">
+            <Link to="/reporting">
+              <span>Reporting</span>
+            </Link>
+          </MenuItem>
+          <Button className="menu-right" type="primary" icon="logout" onClick={this.actionLogout}>
+            LOGOUT
+          </Button>
+        </Menu>
+      </Header>
     );
   }
 }
