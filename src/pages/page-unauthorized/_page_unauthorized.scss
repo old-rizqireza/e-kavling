@@ -1,0 +1,29 @@
+.bt-error-page {
+  background: $slate-lighter;
+  height: 100vh;
+  .bt-card {
+    width: 720px;
+    max-width: 100%;
+    @extend %bt-center-xy;
+    text-align: center;
+    padding: $spacing-lg;
+    h1 {
+      font-family: $font-geomanist-medium;
+      font-size: 28px;
+    }
+    p {
+      margin-bottom: $spacing-sm;
+      font-family: $font-geomanist-book;
+      font-size: 18px;
+      &.bt-typo-mono {
+        margin-bottom: $spacing-lg;
+      }
+    }
+  }
+  @media (max-width: $screen-md-max) {
+    background: $white;
+    .bt-card {
+      box-shadow: none;
+    }
+  }
+}

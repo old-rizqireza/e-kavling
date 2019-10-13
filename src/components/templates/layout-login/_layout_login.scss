@@ -1,0 +1,146 @@
+$leftWidth: 60%;
+
+.bt-login {
+  height: 100vh;
+
+  .bt-login-image {
+    height: 100%;
+    position: fixed;
+    width: $leftWidth;
+    background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%);
+    background-size: cover;
+    background-position: center 30%;
+  }
+
+  .bt-login-form {
+    width: 100% - $leftWidth;
+    margin-left: $leftWidth;
+    min-height: 100%;
+    padding: 72px $spacing-xl;
+    overflow: hidden;
+    display: table;
+    text-align: center;
+    background: $slate-lightest;
+
+    .bt-login-form__panel {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .bt-login-form__logo {
+      margin-bottom: $spacing-sm;
+
+      img {
+        width: 380px;
+      }
+    }
+
+    .bt-login-form__title {
+      h3 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .bt-login-form__button {
+      margin-top: 100px;
+      display: inline-block;
+
+      .ant-btn {
+        width: 100%;
+      }
+
+      .ant-form-item {
+        margin-bottom: 10px;
+      }
+
+      .login-form-remember,
+      .login-form-register {
+        float: left;
+      }
+
+      .login-form-forgot {
+        float: right;
+      }
+    }
+
+    .ant-alert {
+      text-align: left;
+      margin-bottom: $spacing-lg;
+    }
+
+    .bt-login-form__footer {
+      margin-top: 120px;
+
+      img {
+        width: 160px;
+      }
+
+      small {
+        margin-top: $spacing-sm;
+        font-size: 12px;
+        display: block;
+        color: #a0a3ac;
+      }
+    }
+  }
+
+  .bt-btn-login {
+    font-family: $font-geomanist-book !important;
+    font-size: 16px !important;
+    border: 0 !important;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12) !important;
+    width: auto;
+
+    >div {
+      height: 38px;
+      margin-right: 0 !important;
+      padding-left: $spacing-sm !important;
+      padding-right: $spacing-sm !important;
+    }
+
+    >span {
+      padding-right: $spacing-sm !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    $leftWidth: 40%;
+
+    .bt-login-image {
+      width: $leftWidth;
+    }
+
+    .bt-login-form {
+      width: 100% - $leftWidth;
+      margin-left: $leftWidth;
+    }
+  }
+
+  @media (max-width: 767px) {
+    $leftWidth: 0;
+
+    .bt-login-image {
+      width: $leftWidth;
+    }
+
+    .bt-login-form {
+      width: 100% - $leftWidth;
+      margin-left: $leftWidth;
+      padding: $spacing-lg;
+
+      .bt-login-form__button {
+        margin-top: $spacing-lg;
+      }
+
+      .bt-login-form__footer {
+        margin-top: $spacing-lg * 2;
+      }
+    }
+  }
+}

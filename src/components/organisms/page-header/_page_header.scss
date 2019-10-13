@@ -1,0 +1,18 @@
+.bt-page-header {
+  position: relative;
+  .bt-page-header__title {
+    font-size: 28px;
+    margin-bottom: $spacing-md;
+    font-weight: 700;
+    word-break: break-all;
+  }
+  &.bt-page-header--action {
+    .bt-page-header__title {
+      padding-right: 264px;
+      word-break: break-all;
+      @media (max-width: $screen-md-max) {
+        padding-right: 0;
+      }
+    }
+  }
+}

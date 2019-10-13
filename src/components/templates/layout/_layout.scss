@@ -1,0 +1,16 @@
+.bt-cms {
+  .bt-sidebar {
+    &.ant-layout-sider {
+      background: $navy-darkest;
+    }
+    .ant-layout-sider-trigger {
+      background: $navy-darkest;
+    }
+  }
+  .bt-content {
+    padding: $spacing-sm $spacing-lg $spacing-lg $spacing-lg;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+}

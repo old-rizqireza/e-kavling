@@ -1,0 +1,17 @@
+.bt-form-title {
+  h3 {
+    margin-bottom: $spacing-md;
+    font-weight: 700;
+    text-align: right;
+    font-family: $font-geomanist-book;
+  }
+  .ant-badge,
+  .ant-btn {
+    float: right;
+  }
+  @media (max-width: $screen-md-max) {
+    h3 {
+      text-align: left;
+    }
+  }
+}

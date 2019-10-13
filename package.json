@@ -1,32 +1,85 @@
 {
   "name": "e-kavling",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "antd": "^3.23.6",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "@types/react-beautiful-dnd": "^7.1.2",
+    "@types/react-input-mask": "^2.0.1",
+    "@vesteind/react-scripts-ts-sass": "^2.17.0-boop",
+    "antd": "^3.11.2",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "enhanced-resolve": "^4.1.0",
+    "history": "^4.7.2",
+    "is-my-json-valid": "^2.19.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "query-string": "^6.2.0",
+    "rc-form": "^2.4.9",
+    "react": "^16.5.2",
+    "react-beautiful-dnd": "^10.0.1",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.5.2",
+    "react-input-mask": "^2.0.4",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts-ts": "^4.0.8",
+    "reactstrap": "^6.5.0",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.19.1",
+    "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "run-p start",
+    "start": "PORT=3000 react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "jest --verbose",
+    "integration-test": "jest -c jest-integration.config.js",
+    "eject": "react-scripts-ts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/file-saver": "^2.0.0",
+    "@types/history": "^4.7.1",
+    "@types/jest": "^23.3.7",
+    "@types/lodash": "^4.14.117",
+    "@types/node": "^10.11.7",
+    "@types/query-string": "^6.2.0",
+    "@types/react": "^16.4.16",
+    "@types/react-document-title": "^2.0.3",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-redux": "^6.0.9",
+    "@types/react-router": "^4.0.32",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/reactstrap": "^6.4.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/throttle-debounce": "^1.1.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
+    "jest-cli": "^25.0.0",
+    "jest-localstorage-mock": "^2.4.0",
+    "json-server": "^0.14.0",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.3"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

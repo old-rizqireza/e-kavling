@@ -1,0 +1,22 @@
+// STYLE PLUGIN
+@import "~antd/dist/antd.css";
+
+// STYLE CUSTOM
+@import './assets/styles/variable';
+@import './assets/styles/mixins';
+@import './assets/styles/custom';
+
+// STYLE TEMPLATE
+@import "./components/templates/layout-login/layout_login";
+@import "./components/templates/layout-not-found/layout_not_found";
+@import "./components/templates/layout/layout";
+
+// STYLE MOLECULES
+@import './components/molecules/form-back/form_back';
+@import './components/molecules/form-title/form_title';
+
+// STYLE ORGANISMS
+@import './components/organisms/menu-header/menu_header';
+
+// STYLE PAGES
+@import './pages/page-unauthorized/page_unauthorized';

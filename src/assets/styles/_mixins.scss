@@ -1,0 +1,154 @@
+@mixin absolute-pseudo($z-index: auto) {
+  content: "";
+  position: absolute;
+  z-index: $z-index;
+}
+@mixin display-scroll() {
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+@mixin no-gutter() {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+@mixin text-overflow($font-size, $lines-to-show) {
+  $line-height: 1.5;
+  margin: 0;
+  display: block;
+  display: -webkit-box;
+  max-height: $font-size * $line-height * $lines-to-show;
+  min-height: $font-size * $line-height * $lines-to-show;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  white-space: normal;
+}
+%bt-center-y {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: absolute;
+}
+%bt-center-x {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  position: absolute;
+}
+%bt-center-xy {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+}
+%bt-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@-webkit-keyframes bt-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes bt-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+%bt-skeleton {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(25%, #f2f2f2),
+    color-stop(37%, #e6e6e6),
+    color-stop(63%, #f2f2f2)
+  );
+  background: -webkit-linear-gradient(left, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+  background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+  -webkit-animation: bt-skeleton-loading 1.4s ease infinite;
+  animation: bt-skeleton-loading 1.4s ease infinite;
+  background-size: 400% 100%;
+  color: transparent;
+}
+%bt-skeleton-xsmall {
+  @extend %bt-skeleton;
+  width: 120px !important;
+  height: 20px !important;
+}
+%bt-skeleton-small {
+  @extend %bt-skeleton;
+  width: 160px !important;
+  height: 20px !important;
+}
+%bt-skeleton-big {
+  @extend %bt-skeleton;
+  width: 200px !important;
+  height: 24px !important;
+}
+
+@mixin flex() {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin flex-bottom() {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+@mixin flex-top() {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+@mixin flex-col() {
+  position: relative;
+  width: 100%;
+}
+@mixin flex-layout {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+@mixin bt-skeleton() {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(25%, $slate),
+    color-stop(37%, $slate-light),
+    color-stop(63%, $slate)
+  );
+  background: -webkit-linear-gradient(left, $slate 25%, $slate-light 37%, $slate 63%);
+  background: linear-gradient(90deg, $slate 25%, $slate-light 37%, $slate 63%);
+  -webkit-animation: bt-skeleton-loading 1.4s ease infinite;
+  animation: bt-skeleton-loading 1.4s ease infinite;
+  background-size: 400% 100%;
+  color: transparent;
+}

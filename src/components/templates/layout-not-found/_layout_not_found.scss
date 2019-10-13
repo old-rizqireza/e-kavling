@@ -1,0 +1,30 @@
+.bt-cms-not-found {
+  @extend %bt-center-xy;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 640px;
+  h1 {
+    font-family: $font-geomanist-book;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 72px;
+    font-weight: 700;
+  }
+  img {
+    width: 320px;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+  p {
+    margin-bottom: $spacing-sm;
+  }
+  .bt-cms-not-found__body {
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+}
