@@ -2,6 +2,11 @@
   "name": "e-kavling",
   "version": "0.1.0",
   "homepage": "https://bmd-rizqireza.github.io/e-kavling",
+  "private": true,
+  "engines": {
+    "npm": "6.7.0",
+    "node": "11.10.1"
+  },
   "dependencies": {
     "@types/react-beautiful-dnd": "^7.1.2",
     "@types/react-input-mask": "^2.0.1",
